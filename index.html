@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InfoFlow AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+
+    <script>
+      // InfoFlow AI — Logomark
+      //
+      // Design philosophy: One single, confident, geometric letterform.
+      // No illustrations. No clipart. No complexity.
+      // Just like Linear, Vercel, Stripe, Notion — one mark, done perfectly.
+      //
+      // The mark: A stylized "I" built from two precise vertical bars
+      // connected by a diagonal slash — representing data FLOW.
+      // The diagonal creates movement, speed, and the "connection"
+      // between input (documents) and output (answers).
+      //
+      // Construction: Pure geometry. Every coordinate is deliberate.
+      // No filters, no glows, no gradients on the mark itself.
+      // The mark is pure white on a single solid-to-subtle gradient ground.
+      // This is how real brands work.
+
+      const LOGO_SVG = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+          <defs>
+            <linearGradient id="bg" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#4338ca"/>
+              <stop offset="100%" stop-color="#4f46e5"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Ground: Single rounded square. No border. No glow. Just confident color. -->
+          <rect width="100" height="100" rx="22" fill="url(#bg)"/>
+
+          <!-- The mark: Stylized abstract "IF" ligature -->
+          <!-- Left vertical bar: the "I" — represents Input / Index -->
+          <rect x="26" y="28" width="7.5" height="44" rx="2" fill="white"/>
+
+          <!-- Right vertical bar: shorter, offset — represents Flow / Forward -->
+          <rect x="66.5" y="28" width="7.5" height="44" rx="2" fill="white"/>
+
+          <!-- Diagonal connector: the FLOW — ties input to output -->
+          <!-- This is the hero element. A single confident slash. -->
+          <rect x="29" y="46" width="42" height="7.5" rx="2" fill="white"
+                transform="rotate(-30 50 50)"/>
+        </svg>
+      `;
+
+      window.__INFOFLOW_LOGO_SVG__ = LOGO_SVG;
+      window.__INFOFLOW_LOGO_URI__ = 'data:image/svg+xml,' + encodeURIComponent(LOGO_SVG.trim());
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
